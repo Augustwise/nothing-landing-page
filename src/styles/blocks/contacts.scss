@@ -49,7 +49,7 @@
 
   &__textarea {
     min-height: 120px;
-    resize: vertical;
+    resize: none;
   }
 
   &__input,
@@ -69,6 +69,14 @@
     &:focus {
       outline: none;
       border-color: $primary-color;
+    }
+
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus {
+      -webkit-text-fill-color: $primary-color;
+      caret-color: $primary-color;
+      transition: background-color 5000000s ease-in-out 0s;
     }
   }
 
